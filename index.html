@@ -7,97 +7,154 @@
   <title>Unified Thinker</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
   <style>
-    body { font-family: 'Google Sans', sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; }
-    .hero { text-align: center; padding: 50px 0; }
-    .title { font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; }
-    .authors { font-size: 1.2rem; margin-bottom: 20px; color: #555; }
-    .links { margin-bottom: 30px; }
-    .button { display: inline-block; padding: 10px 20px; margin: 5px; background: #222; color: white; text-decoration: none; border-radius: 25px; transition: 0.3s; }
-    .button:hover { background: #555; }
-    .section-title { font-size: 1.8rem; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
-    .abstract { background: #f9f9f9; padding: 30px; border-radius: 10px; font-style: italic; }
-    .figure { text-align: center; margin: 30px 0; }
-    .figure img { max-width: 100%; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .caption { font-size: 0.9rem; color: #666; margin-top: 10px; }
-    pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+    body { font-family: 'Google Sans', sans-serif; background-color: #ffffff; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    
+    /* Header & Authors */
+    .hero { text-align: center; padding: 60px 0 30px 0; }
+    .title { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #222; }
+    .authors { font-size: 1.2rem; margin-bottom: 10px; }
+    .authors a { color: #007bff; text-decoration: none; }
+    .authors a:hover { text-decoration: underline; }
+    .institution { font-size: 1.1rem; color: #666; margin-bottom: 25px; }
+    
+    /* Buttons */
+    .link-block { display: inline-block; margin: 5px; }
+    .button { background-color: #222; color: #fff; border-radius: 30px; padding: 10px 25px; text-decoration: none; font-weight: 500; transition: all 0.3s; display: flex; align-items: center; }
+    .button i { margin-right: 8px; }
+    .button:hover { background-color: #555; transform: translateY(-2px); }
+
+    /* Sections */
+    .section { padding: 40px 0; }
+    .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    .abstract-box { background-color: #f8f9fa; padding: 30px; border-radius: 15px; text-align: justify; }
+    
+    /* Images & Figures */
+    .figure-box { text-align: center; margin: 40px 0; }
+    .figure-img { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .caption { font-size: 0.95rem; color: #555; margin-top: 15px; padding: 0 10%; }
+
+    /* Highlights list */
+    .highlights ul { padding-left: 20px; }
+    .highlights li { margin-bottom: 10px; }
+
+    /* BibTeX */
+    pre { background-color: #f4f4f4; padding: 20px; border-radius: 8px; font-size: 0.9rem; overflow-x: auto; border: 1px solid #ddd; }
+
+    footer { text-align: center; padding: 50px 0; color: #888; font-size: 0.9rem; }
+    
+    @media (max-width: 768px) {
+      .title { font-size: 2rem; }
+      .authors { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1 class="title">Unified Thinker: A General Reasoning Modular Core for Image Generation</h1>
-  <div class="authors">
-    Sashuai Zhou<sup>*</sup>, Xiaoyu<sup>*</sup>, ... (您的作者列表)
-  </div>
-  <div class="institution" style="margin-bottom: 20px; color: #777;">
-    Zhejiang University
-  </div>
-  <div class="links">
-    <a href="#" class="button"><i class="fas fa-file-pdf"></i> Paper</a>
-    <a href="#" class="button"><i class="fab fa-github"></i> Code</a>
-    <a href="#" class="button"><i class="fas fa-database"></i> Data</a>
-  </div>
-</section>
+<div class="container">
+  <section class="hero">
+    <h1 class="title">Unified Thinker: A General Reasoning Modular Core for Image Generation</h1>
+    
+    <div class="authors">
+      <span class="author-block"><strong>Sashuai Zhou</strong><sup>1,2*</sup>,</span>
+      <span class="author-block"><strong>Qiang Zhou</strong><sup>2*</sup>,</span>
+      <span class="author-block"><strong>Jijin Hu</strong><sup>2*</sup>,</span>
+      <span class="author-block"><strong>Hanqing Yang</strong><sup>2*</sup>,</span>
+      <span class="author-block"><strong>Yue Cao</strong><sup>3</sup>,</span>
+      <span class="author-block"><strong>Junpeng Ma</strong><sup>4</sup>,</span><br>
+      <span class="author-block"><strong>Yinchao Ma</strong><sup>2</sup>,</span>
+      <span class="author-block"><strong>Jun Song</strong><sup>2&dagger;</sup>,</span>
+      <span class="author-block"><strong>Tiezheng Ge</strong><sup>2</sup>,</span>
+      <span class="author-block"><strong>Cheng Yu</strong><sup>2</sup>,</span>
+      <span class="author-block"><strong>Bo Zheng</strong><sup>2</sup>,</span>
+      <span class="author-block"><strong>Zhou Zhao</strong><sup>1&dagger;</sup></span>
+    </div>
 
-<section class="abstract">
-  <h2 style="text-align: center;">Abstract</h2>
-  <p>
-    尽管高保真图像合成取得了显著进步，但在逻辑密集型指令遵循方面仍面临挑战 [cite: 1, 349]。
-    我们提出了 <strong>Unified Thinker</strong>，这是一种任务无关的通用图像生成推理架构，设计为可插入不同生成器和工作流的统一规划核心 [cite: 4, 352]。
-    Unified Thinker 实现了“思考者（Thinker）”与“生成器（Generator）”的解耦，允许在不重新训练整个模型的情况下进行模块化推理升级 [cite: 5, 353]。
-    我们引入了两阶段训练范式：首先构建结构化规划接口，然后应用强化学习（RL）将策略锚定在像素级反馈中，优化视觉准确性 [cite: 6, 354]。
-  </p>
-</section>
+    <div class="institution">
+      <sup>1</sup>Zhejiang University, &nbsp; 
+      <sup>2</sup>Alibaba Group, &nbsp; 
+      <sup>3}</sup>Nanjing University, &nbsp; 
+      <sup>4</sup>Fudan University
+    </div>
 
-<section>
-  <h2 class="section-title">Visual Demonstrations</h2>
-  <div class="figure">
-    <img src="assets/images/visual_demo.png" alt="Unified Thinker Visual Demonstrations">
-    <p class="caption">Figure 1: Unified Thinker 在图像编辑和文本生成图像任务中的视觉演示。它能够处理复杂的逻辑指令，如数独求解或基于常识的场景修改 [cite: 22, 442]。</p>
+    <div class="notes" style="font-size: 0.9rem; color: #777; margin-bottom: 25px;">
+      <span>* Equal contribution.</span> &nbsp;&nbsp; 
+      <span>&dagger; Corresponding authors.</span>
+    </div>
+
+    <div class="link-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+      <span class="link-block">
+        <a href="#" class="button"><i class="fas fa-file-pdf"></i> Paper</a>
+      </span>
+      <span class="link-block">
+        <a href="https://github.com/LivingFutureLab/UnifiedThinker" class="button" target="_blank">
+          <i class="fab fa-github"></i> Code
+        </a>
+      </span>
+      <span class="link-block">
+        <a href="#" class="button"><i class="fas fa-database"></i> HieraReason-40K</a>
+      </span>
+    </div>
+  </section>
+
+  <div class="figure-box">
+    <img src="assets/images/teaser.png" class="figure-img" alt="Unified Thinker Teaser">
+    <p class="caption">
+      <strong>Unified Thinker</strong> serves as a modular reasoning core that bridges the gap between high-level logic and pixel-level synthesis across various generative tasks.
+    </p>
   </div>
-</section>
 
-<section>
-  <h2 class="section-title">Methodology: Think-then-Execute</h2>
-  <p>
-    我们的框架由两个核心组件组成：
-    <ul>
-      <li><strong>Thinker</strong>: 一个独立的可训练多模态大语言模型（MLLM），将指令转换为层次化的、生成器友好的规划（包括意图总结、显式约束和子目标） [cite: 25, 445]。</li>
-      <li><strong>Generator</strong>: 基于扩散模型的图像合成后端，根据 Thinker 的输出生成最终图像 [cite: 24, 444]。</li>
-    </ul>
-  </p>
-  <div class="figure">
-    <img src="assets/images/framework.png" alt="Two-stage Training Framework">
-    <p class="caption">Figure 2: 提出的两阶段训练框架：联合监督微调（Joint SFT）和执行引导的双相强化学习（Dual-Phase RL） [cite: 77, 329]。</p>
-  </div>
-</section>
+  <section class="section">
+    <h2 class="section-title">Abstract</h2>
+    <div class="abstract-box">
+      <p>
+        Despite impressive progress in high-fidelity image synthesis, generative models still struggle with logic-intensive instruction following, exposing a persistent reasoning-execution gap. We propose <strong>Unified Thinker</strong>, a task-agnostic reasoning architecture for general image generation, designed as a unified planning core that can plug into diverse generators and workflows. Unified Thinker decouples a dedicated <i>Thinker</i> from the image <i>Generator</i>, enabling modular reasoning upgrades without retraining the entire system. We introduce a two-stage training paradigm: first, constructing a structured planning interface through supervised fine-tuning; second, applying reinforcement learning (RL) to anchor the policy in pixel-level feedback. Our framework demonstrates superior performance across logic-heavy benchmarks, effectively bridging the reasoning-execution gap.
+      </p>
+    </div>
+  </section>
 
-<section>
-  <h2 class="section-title">Key Results</h2>
-  <p>
-    在多个基准测试（如 RISEBench, WiseBench）中，Unified Thinker 显著提升了指令遵循和约束满足能力 [cite: 32, 452]：
-    <ul>
-      <li><strong>推理增强</strong>：在 RISEBench 上，相比基础生成器，在时间、因果和空间推理维度均有大幅提升 [cite: 106, 115]。</li>
-      <li><strong>模块化迁移</strong>：该推理核心在不同生成器后端（如 Qwen2.5-VL-7B, Qwen3-VL-8B）上表现出良好的跨模型移植性 [cite: 119, 439]。</li>
-    </ul>
-  </p>
-</section>
+  <section class="section">
+    <h2 class="section-title">Methodology</h2>
+    <div class="highlights">
+      <ul>
+        <li><strong>Decoupled Architecture:</strong> A plug-and-play reasoning core (Thinker) that generates structured plans for downstream Generators (e.g., Stable Diffusion, Flux).</li>
+        <li><strong>HieraReason-40K Dataset:</strong> A large-scale dataset featuring hierarchical reasoning traces (Intent, Constraints, Sub-goals) for 40,000 image generation and editing tasks.</li>
+        <li><strong>Dual-Phase Training:</strong> Combines Joint Supervised Fine-Tuning (SFT) with Executable Reinforcement Learning (using H-GRPO) to optimize reasoning based on final image quality.</li>
+      </ul>
+    </div>
+    <div class="figure-box">
+      <img src="assets/images/framework.png" class="figure-img" alt="Framework Architecture">
+      <p class="caption">Figure 1: The Unified Thinker framework workflow, illustrating the <i>Think-then-Execute</i> process where the Thinker acts as an expert planner.</p>
+    </div>
+  </section>
 
-<section>
-  <h2 class="section-title">BibTeX</h2>
-  <pre><code>@article{zhou2026unified,
+  <section class="section">
+    <h2 class="section-title">Visual Results</h2>
+    <p>Our method excels in complex spatial, temporal, and causal reasoning tasks that traditional models fail to interpret correctly.</p>
+    <div class="figure-box">
+      <img src="assets/images/results.png" class="figure-img" alt="Visual Results">
+      <p class="caption">Figure 2: Qualitative comparisons on RISEBench and WiseBench. Unified Thinker correctly follows logic-dense prompts involving precise object placement and attribute reasoning.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">BibTeX</h2>
+    <pre><code>@article{zhou2026unified,
   title={Unified Thinker: A General Reasoning Modular Core for Image Generation},
-  author={Zhou, Sashuai and others},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  author={Zhou, Sashuai and Xiaoyu and others},
+  journal={arXiv preprint arXiv:2601.XXXXX},
   year={2026}
 }</code></pre>
-</section>
+  </section>
 
-<footer style="text-align: center; padding: 40px 0; color: #888; font-size: 0.8rem;">
-  Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+</div>
+
+<footer>
+  <p>Website created by Sashuai Zhou. Template inspired by the Academic Project Page standards.</p>
 </footer>
 
 </body>
