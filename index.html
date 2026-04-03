@@ -23,7 +23,7 @@
     /* Hero Section - 极大压缩间距 */
     .hero { text-align: center; padding: 40px 0 20px 0; }
     .title { 
-      font-family: 'Outfit', sans-serif; font-size: 2.8rem; font-weight: 800; margin: 0 0 10px 0;
+      font-family: 'Outfit', sans-serif; font-size: 2.4rem; font-weight: 800; margin: 0 0 10px 0;
       background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .authors { font-size: 1.05rem; margin-bottom: 5px; }
@@ -76,8 +76,8 @@
 <div class="container">
   <section class="hero">
     <h1 class="title">Unified Thinker</h1>
-    <p style="font-weight: 600; color: #6366f1; margin: -5px 0 15px 0; font-size: 1.1rem;">
-      Modular Reasoning Core for Image Generation
+    <p style="font-weight: 600; color: #6366f1; margin: -5px 0 15px 0; font-size: 1.5rem;">
+      A General Reasoning Modular Core for Image Generation
     </p>
     
     <div class="authors">
@@ -97,10 +97,14 @@
     </div>
 
     <div class="institution">
-      <sup>1</sup>ZJU &nbsp;&bull;&nbsp; <sup>2</sup>Alibaba &nbsp;&bull;&nbsp; <sup>3</sup>NJU &nbsp;&bull;&nbsp; <sup>4</sup>Fudan
+      <sup>1</sup>Zhejiang University &nbsp;&bull;&nbsp; 
+      <sup>2</sup>Alibaba Group &nbsp;&bull;&nbsp; 
+      <sup>3</sup>Nanjing University &nbsp;&bull;&nbsp; 
+      <sup>4</sup>Fudan University
     </div>
 
     <div class="link-container">
+      <a href="./" class="button"><i class="fas fa-home"></i> Project
       <a href="https://arxiv.org/abs/2601.03127" class="button"><i class="ai ai-arxiv"></i> arXiv</a>
       <a href="https://github.com/LivingFutureLab/UnifiedThinker" class="button special"><i class="fab fa-github"></i> Code</a>
       <a href="#" class="button"><i class="fas fa-database"></i> Dataset</a>
@@ -108,21 +112,26 @@
   </section>
 
   <div class="figure-box">
-      <img src="src/case.jpg" width="750" class="figure-img" alt="Main Results">
+      <img src="src/case.jpg" class="figure-img" alt="Main Results">
       <p class="caption"><span class="highlight">Unified Thinker</span> bridges the reasoning-execution gap with modular upgrades.</p>
   </div>
 
   <section class="section">
     <h2 class="section-title">Abstract</h2>
     <div class="abstract-box">
-      Unified Thinker is a task-agnostic reasoning architecture designed as a <span class="highlight">unified planning core</span> for diverse generators. By decoupling the <span class="highlight">Thinker</span> from the <span class="highlight">Generator</span>, we enable modular reasoning upgrades without retraining. Our framework anchors high-level intents to pixel-level synthesis via <span class="highlight">Reinforcement Learning (RL)</span>.
+      Despite impressive progress in high-fidelity image synthesis, generative models still struggle with logic-intensive instruction following, exposing a persistent <span class="highlight">reasoning-execution gap</span>. 
+      We propose <strong>Unified Thinker</strong>, a task-agnostic reasoning architecture designed as a <strong>unified planning core</strong> that can plug into diverse generators and workflows. 
+      Unified Thinker <strong>decouples</strong> a dedicated <span class="highlight">Thinker</span> from the image <strong>Generator</strong>, enabling <strong>modular upgrades</strong> of reasoning without retraining the entire model. 
+      We further introduce a <strong>two-stage training paradigm</strong>: first building a structured planning interface, then applying reinforcement learning to ground its policy in <strong>pixel-level feedback</strong>, ensuring plans optimize <strong>visual correctness</strong> over textual plausibility.
+      </p>
+    </div>
     </div>
   </section>
 
   <section class="section">
     <h2 class="section-title">Methodology</h2>
     <div class="figure-box">
-      <img src="src/pipe.jpg" class="figure-img" style="max-height: 300px;" alt="Pipeline">
+      <img src="src/pipe.jpg" class="figure-img" alt="Pipeline">
       <p class="caption"><strong>Figure 1: Think-then-Execute.</strong> Structured planning for precise synthesis.</p>
     </div>
   </section>
@@ -130,11 +139,15 @@
   <section class="section">
     <h2 class="section-title">BibTeX</h2>
     <div class="bibtex-box">
-      <pre style="margin: 0;">@misc{zhou2026unifiedthinker,
-  title={Unified Thinker: A General Reasoning Modular Core for Image Generation}, 
-  author={Sashuai Zhou and Zhou Zhao and others},
-  year={2026}, eprint={2601.03127}, archivePrefix={arXiv}
-}</pre>
+      <pre style="margin: 0;">@misc{zhou2026unifiedthinkergeneralreasoning,
+        title={Unified Thinker: A General Reasoning Modular Core for Image Generation}, 
+        author={Sashuai Zhou and Qiang Zhou and Jijin Hu and Hanqing Yang and Yue Cao and Junpeng Ma and Yinchao Ma and Jun Song and Tiezheng Ge and Cheng Yu and Bo Zheng and Zhou Zhao},
+        year={2026},
+        eprint={2601.03127},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2601.03127}, 
+  }</pre>
     </div>
   </section>
 
